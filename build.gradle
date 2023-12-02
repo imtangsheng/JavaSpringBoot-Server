@@ -17,9 +17,14 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator' //Actuator提供相关健康检查、计量和监控端点等功能。通过添加起启动器依赖后,可以实现应用程序的监控和管理。提供/actuator/**统一接入点。
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //Thymeleaf 模板中定义 html 文件
 	implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	implementation 'org.springframework.boot:spring-boot-starter-security' //用于应用程序
+//  Temporary explicit version to fix Thymeleaf bug
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE' //用于 Thymeleaf 和 Spring Security 集成
+	implementation 'org.springframework.security:spring-security-test' //用于测试
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

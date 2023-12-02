@@ -12,9 +12,9 @@ public class RobotServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RobotServerApplication.class, args);
 	}
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name",defaultValue = "World") String name){
-		return String.format("Hello %s",name);
+	@GetMapping("/hello1")
+	public String hello(@RequestParam(value = "name",defaultValue = "World!") String name){
+		return String.format("Hello %s,\"/hello\"",name);
 	}
 
 }
