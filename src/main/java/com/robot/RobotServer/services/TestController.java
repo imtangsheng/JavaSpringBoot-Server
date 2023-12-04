@@ -1,12 +1,18 @@
 package com.robot.RobotServer.services;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.robot.RobotServer.db.mysql.User;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TestController {
-    @GetMapping("/test")
+    @PostMapping("/test")
     public String index() {
         return "Greetings from Spring Boot!";
+    }
+
+    @PostMapping(path = "/test1")
+    public @ResponseBody String test1 (@RequestParam String username){
+        System.out.println(username);
+        return "Saved";
     }
 }

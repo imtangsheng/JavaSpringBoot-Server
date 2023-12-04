@@ -21,11 +21,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-	implementation 'org.springframework.boot:spring-boot-starter-security' //用于应用程序
+//	Set up Spring Security
+//	implementation 'org.springframework.boot:spring-boot-starter-security' //用于应用程序
 //  Temporary explicit version to fix Thymeleaf bug
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE' //用于 Thymeleaf 和 Spring Security 集成
 	implementation 'org.springframework.security:spring-security-test' //用于测试
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//Accessing data with MySQL
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.mysql:mysql-connector-j'
 }
 
 tasks.named('test') {
