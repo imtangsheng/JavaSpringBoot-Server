@@ -30,6 +30,8 @@ dependencies {
 	//Accessing data with MySQL
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'com.mysql:mysql-connector-j'
+//	Using WebSocket to build an interactive web application
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 }
 
 tasks.named('test') {
