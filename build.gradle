@@ -32,6 +32,8 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 //	Using WebSocket to build an interactive web application
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+//	tcp/udp-ip
+	implementation "org.springframework.integration:spring-integration-ip:6.2.0"
 }
 
 tasks.named('test') {
