@@ -24,7 +24,7 @@ public class TCPServer {
 
         System.out.println(tcpPort);
 //        while (true) {
-//            Socket socket = serverSocket.accept(); //开启会一直阻塞程序
+//            Socket socket = serverSocket.accept(); //
 //            System.out.println(socket);
 //        }
     }
