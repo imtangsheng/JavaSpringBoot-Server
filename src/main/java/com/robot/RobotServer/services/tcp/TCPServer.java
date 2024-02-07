@@ -12,7 +12,7 @@ import java.net.Socket;
 public class TCPServer {
 
     @Value("${tcp.port}")
-    private Integer tcpPort;
+    private Integer tcpPort = 31024;
 
     ServerSocket serverSocket = new ServerSocket(tcpPort);
 
@@ -20,7 +20,7 @@ public class TCPServer {
     }
 
     @PostConstruct
-    public void run() throws IOException {
+    public void run() {
 
         System.out.println(tcpPort);
 //        while (true) {
